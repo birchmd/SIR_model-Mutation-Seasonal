@@ -2,7 +2,7 @@ library("caTools")
 library("DEoptim")
 library("deSolve")
 
-rootDir <- "C:/Users/Michael/Documents/School/NSERC_USRA_2014/SI_model-Mutation-Seasonal"
+rootDir <- "~/SIR_model-Mutation-Seasonal"
 if (!(file.exists(paste(sep="/", rootDir, "SI_mut_consts.R")))){
   stop("Root directory not set correctly! Please edit the value in SI_mut_consts.R")
 }
