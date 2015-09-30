@@ -1,11 +1,20 @@
 All code is written in the R programming language (see https://www.r-project.org/),
 except for a few routines written in C (for speed) that are used in solving
-the ODEs.
+the ODEs. This source code can also be found on GitHub at
+https://github.com/birchmd/SIR_model-Mutation-Seasonal.
 
 DESCRIPTION OF FILES:
 ---------------------------------------
-./SI_mut_consts.R:                          Defines global constants and functions
-./endemicEquilibrium/SI_mut_eqDist_fcns.R:  Defines functions for calculating the endemic equilibrium in the unforced model
-./numericImplimentation/SI_mut_fncs.R:      Defines functions which impliment the numerical scheme outlined in Section 3 of the article
-./numericImplimentation/SI_mut.R:           Main file which calls funcions defined in other files
+./C-code/numCalculus.c:                        Defines trapezoidal rule and centered finite difference 
+                                               functions for calculating integrals and derivatives
 
+./SI_mut_consts.R:                             Defines global constants and functions
+
+./endemicEquilibrium/SI_mut_eqDist_fcns.R:     Defines functions for calculating the endemic equilibrium in the unforced model
+
+./numericImplimentation/compiledDerivatives.c: Used in solving the coupled ODE system which approximates the PDE (see Section 3)
+
+./numericImplimentation/SI_mut_fncs.R:         Defines functions which impliment the numerical scheme outlined in 
+                                               Section 3 of the article
+
+./numericImplimentation/SI_mut.R:              Main file which calls funcions defined in other files
